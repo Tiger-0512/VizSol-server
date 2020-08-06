@@ -30,7 +30,10 @@ SECRET_KEY = '&0ch@%$j)-4*_1#mzpkb=sj+70$p^c$xmt)@nb70%4mn$hn_7q'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [
+    'smile-onlinejob-candidate-manager.au-syd.cf.appdomain.cloud',
+    'localhost'
+]
 
 
 # Application definition
@@ -43,7 +46,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'candidates',
-    'rest_framework'
+    'rest_framework',
 ]
 
 MIDDLEWARE = [
@@ -131,3 +134,5 @@ STATICFILES_DIRS = (
         os.path.join(BASE_DIR, "static"),
     ]
 )
+
+STATIC_ROOT = '/tmp/app/static/'

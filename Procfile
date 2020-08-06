@@ -1,0 +1,1 @@
+web: python manage.py migrate && gunicorn ibm_serverside.wsgi --log-file -

@@ -55,3 +55,7 @@ class CandidateViewSet(viewsets.ModelViewSet):
         candidates = Candidate.objects.all()
         context = {'candidate_list':candidates}
         return render(request, 'output_list.html', context)
+
+    @action(detail=False, methods=["get"])
+    def feedback(self, request):
+        return render(request, 'feedback_send.html')
